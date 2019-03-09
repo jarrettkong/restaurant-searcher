@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+main > * {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 50px auto;
+}
+
+.form-wrapper {
+  width: 60%;
+  margin: 0 auto 25px auto;
+}
+
+.form-wrapper > * {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+input {
+  height: 40px;
+}
+
+input[type='submit'] {
+  margin-bottom: 25px;
+  width: 60%;
+}
