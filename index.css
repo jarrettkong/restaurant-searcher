@@ -69,3 +69,56 @@ input[type='submit']:hover {
 input[type='submit']:focus {
   outline: none;
 }
+
+#restaurant-results {
+  border: 1px solid red;
+}
+
+.result-card {
+  width: 60%;
+  margin: 20px auto;
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.result-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.result-header > * {
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+
+.result-title {
+  font-size: 2.5em;
+  color: red;
+}
+
+.result-location {
+  font-size: 1.5em;
+}
+
+.result-location:first-child {
+  font-weight: 700;
+}
+
+.result-body {
+  height: 200px;
+}
+
+.result-footer {
+  display: flex;
+  justify-items: center;
+  border-top: 1px solid lightgrey;
+  padding-top: 10px;
+}
+
+.result-footer > button {
+  flex: 1;
+  height: 40px;
+}
+
+.result-footer > button:nth-child(2) {
+  margin: 0 10px;

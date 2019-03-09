@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="index.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <title>Restaurant Search</title>
 </head>
 
@@ -30,30 +30,33 @@
     <hr>
     <section id="restaurant-results">
 
-      <div class="result-header">
-        <h2>${title}</h2>
-        <h3>${address}</h3>
-        <p>${cuisine type}</p>
+      <div class="result-card">
+        <div class="result-header">
+          <h2 class="result-title">${title}</h2>
+          <h3 class="result-location">${neighborhood}</h3>
+          <h3 class="result-location">${address}</h3>
+          <!-- <p>${cuisine type}</p> -->
+        </div>
+        <div class="result-body">
+            <img src="" alt="restaurant-photo" class="result-photo">
+          <p class="result-price">${price}</p>
+        </div>
+        <div class="result-footer">
+          <button class="result-footer-button">Call</button>
+          <button class="result-footer-button">Visit Website</button>
+          <button class="result-footer-button">Make Reservation</button>
+        </div>
       </div>
-      <div class="result-body">
-        <img src="" alt="restaurant-photo" class="result-photo">
-        <p class="result-price"></p>
-      </div>
-      <div class="result-footer">
-        <button class="result-footer-button">Call</button>
-        <button class="result-footer-button">Visit Website</button>
-        <button class="result-footer-button">Make Reservation</button>
-      </div>
-
+        
       <template>
         <div class="result-header">
           <h2>${title}</h2>
           <h3>${address}</h3>
           <p>${cuisine type}</p>
+          <p class="result-price">${price}</p>
         </div>
         <div class="result-body">
           <img src="" alt="restaurant-photo" class="result-photo">
-          <p class="result-price"></p>
         </div>
         <div class="result-footer">
           <button class="result-footer-button">Call</button>
