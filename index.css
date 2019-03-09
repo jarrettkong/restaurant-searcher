@@ -8,6 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Roboto';
 }
 
 .wrapper {
@@ -45,9 +46,26 @@ label {
 
 input {
   height: 40px;
+  padding: 0 15px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+#restaurant-name,
+#city-name {
+  border: 1px solid lightgrey;
 }
 
 input[type='submit'] {
   margin-bottom: 25px;
   width: 60%;
+  border: 1px solid lightgrey;
+}
+
+input[type='submit']:hover {
+  cursor: pointer;
+}
+
+input[type='submit']:focus {
+  outline: none;
 }
