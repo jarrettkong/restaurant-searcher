@@ -2,24 +2,25 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
 const Zomato = require('zomato.js')
-const z = new Zomato(process.env.ZOMATO_API_KEY)
+const zomato = new Zomato(process.env.ZOMATO_API_KEY)
 
 const app = express()
+
 
 app.use(express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.post('/search', async (req, res) => {
   try {
-    const q = req.body.q
-    const data = await z.search({ entity_id: 305, entity_type: 'city', q })
+    const q = req.body.q;
+    const data = await zomato.search({ entity_id: 305, entity_type: 'city', q })
 
     const restaurants = data.restaurants.map(r => {
       return {
         name: r.name,
         url: r.url,
         location: r.location,
-        priceRange: r.price_range,
+        price: r.price_range,
         thumbnail: r.thumb,
         rating: r.user_rating.aggregate_rating,
       }

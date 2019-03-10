@@ -18,55 +18,40 @@
       <form action="">
         <div class="form-wrapper">
           <label for="restaurant-name">Search</label>
-          <input type="text" id="restaurant-name" placeholder="Search for a restaurant">
+          <input name="restaurant-name" type="text" id="restaurant-name" placeholder="Search for a restaurant">
         </div>
         <div class="form-wrapper">
-          <label for="city-name">Zip Code</label>
-          <input type="text" id="city-name" placeholder="Enter your city">
+          <label for="city-name">City</label>
+          <input name="city-name" type="text" id="city-name" placeholder="Enter your city">
         </div>
         <input type="submit">
       </form>
     </main>
     <hr>
     <section id="restaurant-results">
-
-      <div class="result-card">
-        <div class="result-header">
-          <h2 class="result-title">${title}</h2>
-          <h3 class="result-location">${neighborhood}</h3>
-          <h3 class="result-location">${address}</h3>
-          <!-- <p>${cuisine type}</p> -->
-        </div>
-        <div class="result-body">
-            <img src="https://b.zmtcdn.com/data/res_imagery/16975424_RESTAURANT_d3ad4214a272757a0fc4774b06117a92_c.jpg?fit=around%7C200%3A200&cr
-            op=200%3A200%3B%2A%2C%2A" alt="restaurant-photo" class="result-photo">
-          <p class="result-price">${price}</p>
-        </div>
-        <div class="result-footer">
-          <button class="result-footer-button">Call</button>
-          <button class="result-footer-button">Visit Website</button>
-          <button class="result-footer-button">Make Reservation</button>
-        </div>
-      </div>
-        
-      <template>
-        <div class="result-header">
-          <h2>${title}</h2>
-          <h3>${address}</h3>
-          <p>${cuisine type}</p>
-          <p class="result-price">${price}</p>
-        </div>
-        <div class="result-body">
-          <img src="" alt="restaurant-photo" class="result-photo">
-        </div>
-        <div class="result-footer">
-          <button class="result-footer-button">Call</button>
-          <button class="result-footer-button">Visit Website</button>
-          <button class="result-footer-button">Make Reservation</button>
-        </div>
-      </template>
     </section>
   </div>
+  
+  <template>
+    <div class="result-card">
+      <div class="result-header">
+        <h2 class="result-title">${title}</h2>
+        <h3 class="result-location result-neighborhood">${neighborhood}</h3>
+        <h3 class="result-location result-address">${address}</h3>
+        <p class="result-price">${price}</p>
+        <!-- <p>${cuisine type}</p> -->
+      </div>
+      <div class="result-body">
+        <img src="" alt="restaurant-photo" class="result-thumbnail">
+        </div>
+      <div class="result-footer">
+        <button class="result-footer-button">Call</button>
+        <button class="result-footer-button"><a href="" target="_blank" class="result-website">Visit Website</a></button>
+        <button class="result-footer-button">Make Reservation</button>
+      </div>
+    </div>
+  </template>
+  <script src="index.js"></script>
 </body>
 
 </html>
